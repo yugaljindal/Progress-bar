@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The progress Bar</h1>
+
+<b><label id= "comp" for="file">In progress:</label></b>
+<progress id="file" value="0" max="100"></progress>
+<b><label id="numb">0 %</label></b>
+<script>
+	id = setInterval(frame , 1000 )
+    var bar = 0;
+    function frame(){
+    if (bar < 100){
+    	bar = bar + 10
+    	document.getElementById("file").value = bar;
+        document.getElementById("numb").innerHTML = bar + " %";
+        if(bar == 100){
+          document.getElementById("comp").innerHTML = "Completed"
+        }
+    }
+    }
+</script>
+</body>
+</html>
